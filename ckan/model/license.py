@@ -174,7 +174,7 @@ class LicenseNotSpecified(DefaultLicense):
 
     @property
     def title(self):
-        return _("License not specified")
+        return _("License Not Specified")
 
 class LicenseOpenDataCommonsPDDL(DefaultLicense):
     domain_data = True
