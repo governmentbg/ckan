@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: CKAN\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2013-12-13 11:40+0000\n"
-"PO-Revision-Date: 2014-09-27 21:45+0000\n"
+"PO-Revision-Date: 2014-09-27 23:00+0000\n"
 "Last-Translator: Dimitar Dimitrov <me@ddimitrov.name>\n"
 "Language-Team: Bulgarian (http://www.transifex.com/projects/p/ckan/language/bg/)\n"
 "MIME-Version: 1.0\n"
@@ -3268,7 +3268,7 @@ msgstr "Преглед на {organization_name}"
 #: ckan/templates/package/base.html:22 ckan/templates/package/new.html:3
 #: ckan/templates/package/snippets/new_package_breadcrumb.html:2
 msgid "Create Dataset"
-msgstr "Създаване на набор от данни"
+msgstr "Нов набор от данни"
 
 #: ckan/templates/package/base_form_page.html:17
 msgid "What are datasets?"
@@ -3795,7 +3795,7 @@ msgstr "Прочитане на набор от данни като %s"
 #: ckan/templates/package/snippets/stages.html:25
 #: ckan/templates/package/snippets/stages.html:27
 msgid "Create dataset"
-msgstr "Създаване на набор от данни"
+msgstr "Нов набор от данни"
 
 #: ckan/templates/package/snippets/stages.html:32
 #: ckan/templates/package/snippets/stages.html:36
@@ -4452,7 +4452,7 @@ msgstr "Потребителят не е създал никакви набор�
 
 #: ckan/templates/user/read_base.html:34
 msgid "You have not provided a biography."
-msgstr "Вие не сте предоставили биография."
+msgstr "Не сте предоставили биография."
 
 #: ckan/templates/user/read_base.html:36
 msgid "This user has no biography."
@@ -5109,7 +5109,7 @@ msgstr "Добавете свои собствени набори от данн�
 
 #: ckan/templates_legacy/home/index.html:38
 msgid "Create a dataset »"
-msgstr "Създаване на набор от данни »"
+msgstr "Нов набор от данни »"
 
 #: ckan/templates_legacy/home/index.html:40
 msgid "Sign up »"
