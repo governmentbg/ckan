@@ -1,4 +1,6 @@
-For contributing CKAN (whether code, bug reports, translations, documentation,
-etc.) see our contributing guidelines:
+Използвайте секцията [Issues](https://github.com/obshtestvo/data.obshtestvo.bg/issues),
+за да сигнализирате за проблем по портала [opendata.government.bg](http://opendata.government.bg/)
 
-http://docs.ckan.org/en/latest/contributing
+С Ваша помощ ние от [Общество](http://www.obshtestvo.bg/) ще се погрижим причините за грешките 
+да се намерят и отстранят.
+
