@@ -1,4 +1,4 @@
-Използвайте секцията [Issues в проекта obshtestvo/opendata](https://github.com/obshtestvo/opendata/issues),
+Използвайте секцията [Issues в проекта obshtestvo/opendata](https://github.com/governmentbg/opendata/issues),
 за да сигнализирате за проблем по портала [opendata.government.bg](http://opendata.government.bg/).
 
 За да бъдат бързо разрешени проблемите, които имате с портала, е полезно да добавите:
@@ -8,5 +8,4 @@
 - часът в който сте имали проблем
 - екранна снимка (*screenshot*) от портала на грешката
 
-С ваша помощ ние от [Общество](http://www.obshtestvo.bg/) ще се погрижим причините за грешките 
-да се намерят и отстранят.
+С ваша помощ, ще се погрижим причините за грешките да бъдат идентифицирани и отстранени.
