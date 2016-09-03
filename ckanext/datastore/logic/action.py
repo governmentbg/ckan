@@ -143,8 +143,13 @@ def datastore_create(context, data_dict):
         raise p.toolkit.ValidationError(str(err))
 
     # Set the datastore_active flag on the resource if necessary
-    p.toolkit.get_action('resource_patch')(
-        context, {'id': data_dict['resource_id'], 'datastore_active': True})
+    if resource.extras.get('datastore_active') is not True:
+        log.debug(
+            'Setting datastore_active=True on resource {0}'.format(resource.id)
+        )
+        p.toolkit.get_action('resource_patch')(
+            context,
+            {'id': data_dict['resource_id'], 'datastore_active': True})
 
     result.pop('id', None)
     result.pop('private', None)
@@ -306,10 +311,20 @@ def datastore_delete(context, data_dict):
 
     '''
     schema = context.get('schema', dsschema.datastore_upsert_schema())
+
+    # Remove any applied filters before running validation.
     filters = data_dict.pop('filters', None)
     data_dict, errors = _validate(data_dict, schema, context)
-    if filters:
+
+    if filters is not None:
+        if not isinstance(filters, dict):
+            raise p.toolkit.ValidationError({
+                'filters': [
+                    'filters must be either a dict or null.'
+                ]
+            })
         data_dict['filters'] = filters
+
     if errors:
         raise p.toolkit.ValidationError(errors)
 
@@ -335,9 +350,17 @@ def datastore_delete(context, data_dict):
     result = db.delete(context, data_dict)
 
     # Set the datastore_active flag on the resource if necessary
-    if not data_dict.get('filters'):
+    model = _get_or_bust(context, 'model')
+    resource = model.Resource.get(data_dict['resource_id'])
+
+    if (not data_dict.get('filters') and
+            resource.extras.get('datastore_active') is True):
+        log.debug(
+            'Setting datastore_active=True on resource {0}'.format(resource.id)
+        )
         p.toolkit.get_action('resource_patch')(
-            context, {'id': data_dict['resource_id'], 'datastore_active': False})
+            context, {'id': data_dict['resource_id'],
+                      'datastore_active': False})
 
     result.pop('id', None)
     result.pop('connection_url')
